@@ -1,0 +1,92 @@
+body {
+    background-color: #292a2e;
+}
+
+.slider-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*size of carousel from min to max for adaptivity*/
+.slick-carousel {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+
+.slick-item {
+    color: white;
+    min-height: 150px;
+    position: relative; /*for absolute arrows positioning*/
+    margin: 0 15px; /*margins between each item*/
+    transition: 0.2s opacity ease-in-out;
+}
+
+/*background-size:cover imitation for each image inside each slider item*/
+.img-responsive {
+    width: 100%;
+    height: 100%;
+}
+
+/*decreasing opacity of all slider items */
+.slick-slide {
+    opacity: 0.3;
+}
+
+.slick-carousel .slick-item:hover {
+    opacity: 0.2;
+}
+
+
+/*giving normal opacity for active slider item*/
+.slick-current {
+    opacity: 1;
+}
+
+/**********************prev/next buttons customisation************************/
+
+/*hiding default buttons*/
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+}
+
+/*styles for custom arrows*/
+.slick-arrow {
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+    border-top: 5px solid #eab724;
+    border-right: 5px solid #eab724;
+    transition: 0.2s transform ease-in-out;
+}
+
+/*repositioning prev arrow*/
+.slick-prev {
+    left: 14%;
+    top: 42%;
+    transform: rotate(225deg);
+}
+
+.slick-prev:hover {
+    transform: rotate(225deg) scale(1.1);
+}
+
+/*repositioning next arrow*/
+.slick-next {
+    right: 14%;
+    top: 42%;
+    transform: rotate(45deg);
+}
+
+.slick-next:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+/*customizing unactive dots*/
+.slick-dots li button:before {
+    color: #fff;
+}
